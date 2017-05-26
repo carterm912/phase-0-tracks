@@ -27,3 +27,10 @@ border. */
 section#contact-info p:last-of-type {
   border-right: none;
 }
+ul li {
+  background-color: red; 
+}
+
+.list :hover {
+  background-color: blue;
+}
