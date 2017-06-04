@@ -16,8 +16,10 @@ health = gets.chomp
 
 if 2017 - age == birth
 	puts "age is true"
+	correct_age = true
 elsif 2017 - age != birth
 	puts "age is false"
+	correct_age = false
 end	
 
 if garlic == "y"
@@ -35,4 +37,28 @@ elsif health == "n"
 	insurance = false
 	puts "doesnt want health"
 end
+
+if name == "Drake Cula"
+	filthy_liar = true
+	puts "liar works"
+elsif name == "Tu Fang"
+	filthy_liar = true
+	puts "liar works"
+else
+	filthy_liar = false
+end	
 	
+
+case
+
+when correct_age && (like_garlic || insurance) && !filthy_liar
+	puts "Probably not a vampire."
+when !correct_age && (like_garlic || insurance) && !filthy_liar
+	puts "Probably a vampire."
+when !correct_age && !like_garlic && !insurance && !filthy_liar
+	puts "Almost certainly a vampire." 
+when filthy_liar
+	puts "Definitely a vampire."
+else
+	puts "Results inconclusive."
+end
