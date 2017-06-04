@@ -20,6 +20,25 @@ garlic = gets.chomp.to_s
 puts "Would you like to enroll in the company’s health insurance? y/n"
 health = gets.chomp
 
+repeat = true
+
+until repeat == false
+	
+puts "Please list any allergies, one at at time. Type 'done' when finished. "
+allergies = gets.chomp
+
+if allergies == "done"
+	repeat = false
+	
+elsif allergies == "sunshine"
+	allergy_check = true
+	repeat = false
+else
+	repeat = true
+end
+
+end
+
 if 2017 - age == birth
 	puts "age is true"
 	correct_age = true
@@ -56,15 +75,16 @@ end
 	
 
 case
-
-when correct_age && (like_garlic || insurance) && !filthy_liar
+when allergy_check
+	puts "Probably a vampire!"
+when correct_age && (like_garlic || insurance) && !filthy_liar && !allergy_check
 	puts "Probably not a vampire."
-when !correct_age && (like_garlic || insurance) && !filthy_liar
+when !correct_age && (like_garlic || insurance) && !filthy_liar && !allergy_check
 	puts "Probably a vampire."
-when !correct_age && !like_garlic && !insurance && !filthy_liar
-	puts "Almost certainly a vampire." 
+when !correct_age && !like_garlic && !insurance && !filthy_liar && !allergy_check
+	puts "Almost certainly a vampire!" 
 when filthy_liar
-	puts "Definitely a vampire."
+	puts "Definitely a vampire!"
 else
 	puts "Results inconclusive."
 end
