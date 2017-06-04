@@ -1,3 +1,9 @@
+puts "How many employees will be processed?"
+total_employees = gets.chomp.to_i
+
+
+until total_employees == 0
+ 	
 
 puts "What is your name?"
 name = gets.chomp
@@ -62,3 +68,9 @@ when filthy_liar
 else
 	puts "Results inconclusive."
 end
+
+total_employees -= 1
+
+end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
