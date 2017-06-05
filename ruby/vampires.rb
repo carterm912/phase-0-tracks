@@ -40,35 +40,29 @@ end
 end
 
 if 2017 - age == birth
-	puts "age is true"
 	correct_age = true
+
 elsif 2017 - age != birth
-	puts "age is false"
+
 	correct_age = false
 end	
 
 if garlic == "y"
 	like_garlic = true
-	puts "likes garlic"
 elsif garlic == "n"
 	like_garlic = false
-	puts "hate garlic"
 end
 
 if health == "y"
 	insurance = true
-	puts "health works"
 elsif health == "n"
 	insurance = false
-	puts "doesnt want health"
 end
 
 if name == "Drake Cula"
 	filthy_liar = true
-	puts "liar works"
 elsif name == "Tu Fang"
 	filthy_liar = true
-	puts "liar works"
 else
 	filthy_liar = false
 end	
