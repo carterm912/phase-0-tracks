@@ -1,0 +1,11 @@
+Lab work (move petridishes)
+
+Obtain petri dish from lab bench.
+	If petridish is empty place back on the counter
+		Grab new petridish.
+	If petridish is full take petridish to Lamanar Flow hood.
+		move from lab bench A right until you hit wall A 
+		Move perpendicular along wall A until you hit wall B
+		Move perpendicular along wall B until you hit Lamanar Flow hood
+			Place petridish in hood.
+			Return to bench A via same route
