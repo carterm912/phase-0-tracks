@@ -7,7 +7,7 @@
 p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-p "zom".
+p "zom".insert(2, "o")
 # => “zoom”
 
 # "enhance".<???>
@@ -19,7 +19,7 @@ p "Stop! You’re under arrest!".upcase
 # "the usual".<???>
 #=> "the usual suspects"
 
-#something with concat I assume.
+#something with concat I assume couldn't figure this one out.
 
 # " suspects".<???>
 # => "the usual suspects"
@@ -30,12 +30,8 @@ p "The case of the disappearing last letter"[0..-2]
 p "The mystery of the missing first letter"[1..-1]
 # => "he mystery of the missing first letter"
 
-p "Elementary,    my   dear        Watson!".tr(" ", "")
+p "Elementary,    My   Dear        Watson!".tr(" ", "").gsub(/(?<=[a-z])(?=[A-Z])/, ' ')
 # => "Elementary, my dear Watson!"
-
-p "z"[122]
-# => 122 
-# (What is the significance of the number 122 in relation to the character z?)
 
 p "How many times does the letter 'a' appear in this string?".index("a")
 # => 4
