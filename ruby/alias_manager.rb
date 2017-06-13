@@ -1,6 +1,15 @@
+#Pseudocode
+#
+#
+#
+#
+#
+#
 #
 @vowels = ["a", "e", "i", "o", "u"]
 @consonants = ("a".."z").to_a - @vowels
+
+# This method takes a vowel and changes it to the next vowel (forgoing y) and works with edge cases.
 def new_vowel(letter)
 		i = 0
 		while i < @vowels.length
@@ -12,7 +21,7 @@ def new_vowel(letter)
 			i += 1
 		end
 	end
-
+# This method takes a consonant letter and changes it to the next consonant letter. ALso works with edge cases.
 def new_consonant(letter)
 	i = 0
 	while i < (@consonants.length)
@@ -24,6 +33,7 @@ def new_consonant(letter)
 		i += 1
 	end
 end
+
 
 
 
