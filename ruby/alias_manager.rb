@@ -13,4 +13,25 @@ def new_vowel(letter)
 		end
 	end
 
+def new_consonant(letter)
+	i = 0
+	while i < (@consonants.length)
+		if @consonants[i] == "z"
+			return @consonants[0]
+		elsif @consonants[i] == letter
+			return @consonants[i+1]
+		end
+		i += 1
+	end
+end
+
+
+
+
+
+
+
+
 p new_vowel('i')
+p new_consonant('j')
+p new_consonant('z')
