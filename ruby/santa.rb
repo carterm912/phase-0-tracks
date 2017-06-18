@@ -15,6 +15,20 @@ class Santa
 	def eat_milk_and_cookies(cookie_type)
 		p "That was a good #{cookie_type}"
 	end
+	#setter methods
+	def celebrate_ birthday
+		@age += 1
+	end
+
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
+	def get_mad_at(reindeer)
+		@reindeer_ranking.delete(reindeer)
+		@reindeer_ranking.push(reindeer)
+		p @reindeer_ranking
+	end
 
 	# getter methods
 	def age
@@ -31,6 +45,8 @@ end
 santa = Santa.new("male", "black")
 puts "Age is #{santa.age}" 
 puts "Ethnicity is #{santa.ethnicity}"
+
+santa.get_mad_at("Rudolph")
 
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
