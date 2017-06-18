@@ -16,8 +16,21 @@ class Santa
 		p "That was a good #{cookie_type}"
 	end
 
+	# getter methods
+	def age
+		@age
+	end
+
+	def ethnicity
+		@ethnicity
+	end
+
 end
 
+
+santa = Santa.new("male", "black")
+puts "Age is #{santa.age}" 
+puts "Ethnicity is #{santa.ethnicity}"
 
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
@@ -25,7 +38,5 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 example_genders.length.times do |i|
   santas << Santa.new(example_genders[rand(6)], example_ethnicities[rand(6)])
 end
-
-p santas
 
 
