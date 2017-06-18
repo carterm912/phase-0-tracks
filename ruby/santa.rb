@@ -16,7 +16,7 @@ class Santa
 	def eat_milk_and_cookies(cookie_type)
 		p "That was a good #{cookie_type}"
 	end
-	
+
 	#setter methods
 	def celebrate_ birthday
 		@age += 1
@@ -53,8 +53,8 @@ santa.get_mad_at("Rudolph")
 santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-example_genders.length.times do |i|
+100.times do |i|
   santas << Santa.new(example_genders[rand(6)], example_ethnicities[rand(6)])
 end
 
-
+p santas
