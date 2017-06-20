@@ -1,9 +1,14 @@
 #My Word Game 
-#Hire me hasro 
+
+
+# I had this working before the crash and now I cannot figure out how I made it work.
+
+
+
 
 class Game
-	attr_reader :won
-	attr_accessor :lives, :word, :guess
+	attr_reader
+	attr_accessor :lives, :word, :guess, :won
 
 	def initialize
 		@word = nil
@@ -97,13 +102,6 @@ end
 
 
 
-
-#while @lives > word.length + 2 
-#	guess = gets.chomp
-#	if letters.include? guess
-#		p2_index = letters.index(guess)
-#		progress_so_far.insert(p2_index, guess)
-#		progress_so_far.delete
 
 
 
