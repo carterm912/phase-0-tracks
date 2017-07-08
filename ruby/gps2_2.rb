@@ -8,12 +8,12 @@
 # output: Hash
 
 def list_maker(string)
-	grocery_hash = {}
+	@grocery_hash = {}
 	new_array = string.split(' ')
 	
-	new_array.each {|x| grocery_hash[x] = nil} 
+	new_array.each {|x| @grocery_hash[x] = nil} 
 
-	return grocery_hash
+	return @grocery_hash
 
 
 
@@ -37,17 +37,30 @@ p grocery_list
 # input: list, item name, and optional quantity
 # steps:
 # output:
+def add_item(item, quantity)
+	@grocery_hash[item] = quantity
+end
+p add_item("apple", 12)
+p @grocery_hash
 
 # Method to remove an item from the list
 # input:
 # steps:
-# output:
+def remove_item(item)
+	@grocery_hash.delete(item)
+end
+remove_item("apple")
 
 # Method to update the quantity of an item
 # input:
 # steps:
 # output:
+def update_quantity(item, num)
+	@grocery_hash[item] = num
+end
 
+p update_quantity("A", 10)
+p @grocery_hash
 
 # Method to print a list and make it look pretty
 # input:
