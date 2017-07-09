@@ -1,0 +1,51 @@
+sqlite> SELECT * FROM stuff;
+1|chair|4|2
+2|table|1|2
+3|lamp|2|1
+4|records|20|1
+5|bike|2|1
+6|skis|3|2
+7|crib|1|2
+8|surfboard|7|1
+
+sqlite> UPDATE stuff SET quantity=2 WHERE name="chair";
+sqlite> SELECT * FROM stuff;
+1|chair|2|2
+2|table|1|2
+3|lamp|2|1
+4|records|20|1
+5|bike|2|1
+6|skis|3|2
+7|crib|1|2
+8|surfboard|7|1
+
+sqlite> SELECT * FROM stuff, location WHERE stuff.location = location.id;
+1|chair|2|2|2|storage unit
+2|table|1|2|2|storage unit
+3|lamp|2|1|1|home
+4|records|20|1|1|home
+5|bike|2|1|1|home
+6|skis|3|2|2|storage unit
+7|crib|1|2|2|storage unit
+8|surfboard|7|1|1|home
+
+sqlite> DELETE FROM stuff WHERE name="chair";
+sqlite> SELECT * FROM stuff;
+2|table|1|2
+3|lamp|2|1
+4|records|20|1
+5|bike|2|1
+6|skis|3|2
+7|crib|1|2
+8|surfboard|7|1
+
+sqlite> SELECT stuff.name, stuff.quantity, location.name FROM stuff JOIN location ON stuff.location = location.id;
+chair|2|storage unit
+table|1|storage unit
+lamp|2|home
+records|20|home
+bike|2|home
+skis|3|storage unit
+crib|1|storage unit
+surfboard|7|home
+
