@@ -1,5 +1,6 @@
 # require gems
 require 'sinatra'
+require "sinatra/reloader" if development?
 require 'sqlite3'
 
 db = SQLite3::Database.new("students.db")
@@ -58,4 +59,12 @@ get '/good_job/:name' do
 	else
 		"Good job!"
 	end
+end
+
+#Create a route that adds two numbers together.
+get '/calculator/:num1/plus/:num2' do
+	num1 = params[:num1].to_i
+	num2 = params[:num2].to_i
+	sum = num1 + num2
+	"#{num1} plus #{num2} equals #{sum}."
 end
