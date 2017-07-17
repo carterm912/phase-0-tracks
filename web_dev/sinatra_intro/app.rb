@@ -44,3 +44,18 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+# contact route that gives an address
+get '/contact' do
+	"www.contactmerightnow.com/notarealaddress"
+end
+
+#Create a route that takes a query parameter and has an if statement.
+get '/good_job/:name' do
+	name = params[:name]
+	if name
+		"Good job #{name}!"
+	else
+		"Good job!"
+	end
+end
